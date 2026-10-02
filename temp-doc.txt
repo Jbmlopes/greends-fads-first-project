@@ -1,0 +1,14 @@
+5.1. Can you explain the copy (`cp ../temp-* .`) command used above?
+
+The `cp` command is used to copy files. `../temp-*` means all files starting with `temp-` in the directory one level above the current directory. The `.` means the current directory. Therefore, the command copies all files starting with `temp-` from the parent directory into the current directory.
+
+5.2. Can you explain why, in this case, we did not have to do `git init`?
+
+We did not have to use `git init` because the `git clone` command already created a Git repository. It copied the repository from GitHub to my computer, including the hidden `.git` directory that contains the git information.
+
+5.3. Can you commit the files copied? What do you need to do? Execute the commands that are needed.
+
+Yes. We need to stage the files using `git add` and then create a commit using `git commit`. The commands are:
+
+% git add .
+% git commit -m "Add project files"
